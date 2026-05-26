@@ -39,7 +39,7 @@ const Login = () => {
         <div className="flex-1 text-left space-y-6 max-w-lg lg:pr-6">
           <div className="flex items-center gap-2">
             <Activity className="h-4 w-4 text-[var(--accent)]" />
-            <span className="text-[10px] font-bold tracking-widest text-zinc-500 uppercase">SubManager Intelligence</span>
+            <span className="text-[10px] font-bold tracking-widest text-zinc-500 uppercase">SpendSnap Intelligence</span>
           </div>
           
           <h1 className="layout-hero text-white tracking-tight">
@@ -129,7 +129,7 @@ const Login = () => {
             </form>
 
             <p className="mt-6 text-center text-zinc-500 text-[10px] font-semibold">
-              New to SubManager?{' '}
+              New to SpendSnap?{' '}
               <Link to="/register" className="text-[var(--accent)] font-bold hover:underline">
                 Create free account
               </Link>

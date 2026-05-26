@@ -84,7 +84,7 @@ const SaaSLayout = () => {
             <div className="h-6 w-6 rounded-lg bg-[var(--accent)]/15 border border-[var(--accent)]/25 flex items-center justify-center shrink-0">
               <Activity className="h-3.5 w-3.5 text-[var(--accent)]" />
             </div>
-            <span className="text-sm font-bold tracking-tight text-white">SubManager</span>
+            <span className="text-sm font-bold tracking-tight text-white">SpendSnap</span>
           </div>
  
           {/* Navigation */}
@@ -165,7 +165,7 @@ const SaaSLayout = () => {
             <div className="h-5 w-5 rounded-md bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
               <Activity className="h-3 w-3 text-[var(--accent)]" />
             </div>
-            <span className="text-xs font-bold tracking-tight text-white">SubManager</span>
+            <span className="text-xs font-bold tracking-tight text-white">SpendSnap</span>
           </div>
           <div className="flex items-center gap-3">
             <button

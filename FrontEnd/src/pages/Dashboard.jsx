@@ -94,7 +94,7 @@ const Dashboard = () => {
                 <Activity className="h-6 w-6 text-white" />
               </div>
               <span className="ml-3 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">
-                SubManager
+                SpendSnap
               </span>
             </div>
             <div className="flex items-center gap-6">

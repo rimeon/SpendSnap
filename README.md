@@ -1,6 +1,6 @@
-# SubManager 📊💳
+# SpendSnap 📊💳
 
-> **SubManager** is a secure, state-of-the-art SaaS subscription tracker and financial analytics dashboard. Built for developer efficiency and robust data handling, it showcases modern engineering patterns such as strategy-based AI fallbacks, secure cookie-based authentication, background automation crons, and non-blocking audit logging.
+> **SpendSnap** is a secure, state-of-the-art SaaS subscription tracker and financial analytics dashboard. Built for developer efficiency and robust data handling, it showcases modern engineering patterns such as strategy-based AI fallbacks, secure cookie-based authentication, background automation crons, and non-blocking audit logging.
 
 ---
 
