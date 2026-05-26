@@ -1,0 +1,2 @@
+# Normalize line endings: always store LF in git, check out as-is on Windows
+* text=auto eol=lf

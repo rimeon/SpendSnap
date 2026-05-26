@@ -1,0 +1,19 @@
+# ─── Dependencies ────────────────────────────────────────────────────────────
+node_modules/
+
+# ─── Environment Variables ────────────────────────────────────────────────────
+# NEVER commit .env — it contains secrets (API keys, JWT secret, DB URI)
+.env
+.env.local
+.env.production
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+
+# ─── OS / Editor ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

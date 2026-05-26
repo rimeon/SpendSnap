@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+html {
+  font-size: 16px; /* Standard baseline */
+}
+
+:root {
+  /* Default Color Mode */
+  --bg: #09090b;
+  --surface: #111113;       /* Sidebar / nav surface */
+  --surface-2: #1a1a1e;     /* Card / raised surface */
+  --surface-3: #222226;     /* Hover / active states */
+  --border: rgba(255,255,255,0.07);   /* Standard border */
+  --border-subtle: rgba(255,255,255,0.04); /* Dividers */
+  --text: #f0f0f0;
+  --text-2: #a1a1aa;        /* Secondary text */
+  --muted: #71717a;
+  --accent: #7dd3fc;        /* Soft Cyan / Sky blue */
+
+  /* Typography Scale — SaaS-calibrated */
+  --page-title: 1.375rem;   /* Inner page headings */
+  --section-title: 1rem;    /* Section headings */
+  --metric: 1.875rem;       /* Large metric numbers */
+  --body: 0.9375rem;        /* Body text */
+  --label: 0.6875rem;       /* Labels / overlines */
+
+  /* Spacing system */
+  --page-px: 2rem;          /* Page horizontal padding */
+  --page-py: 2.25rem;       /* Page vertical padding */
+  --section-gap: 2rem;      /* Gap between page sections */
+  --card-p: 1.5rem;         /* Card padding */
+}
+
+:root[data-theme="warning"] {
+  /* Budget Warning Color Mode */
+  --bg: #08090c;
+  --surface: #0f0f12;
+  --surface-2: #161619;
+  --surface-3: #1d1d21;
+  --text: #f0f0f0;
+  --text-2: #a1a1aa;
+  --muted: #71717a;
+  --accent: #f87171; /* Red override */
+}
+
+/* Global Canvas Reset */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ── Typography System ──────────────────────────────────────────────────────── */
+
+/* Dashboard greeting — kept large but capped at SaaS scale */
+.layout-hero {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Page-level headings (Settings, Budget, Subscriptions) */
+.display-section {
+  font-size: var(--page-title);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+/* Large metric numbers on dashboard / budget */
+.layout-metric {
+  font-size: var(--metric);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+/* Overline / label text */
+.layout-label {
+  font-size: var(--label);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.layout-body {
+  font-size: var(--body);
+  color: var(--text);
+}
+
+/* ── Surface Cards ───────────────────────────────────────────────────────────── */
+
+/* Subtle raised surface card */
+.card-surface {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: var(--card-p);
+}
+
+/* Stat / metric card variant */
+.card-stat {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 0.875rem;
+  padding: 1.5rem;
+}
+
+/* ── Page Section Divider ────────────────────────────────────────────────────── */
+.page-section {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ── Page Header Block ───────────────────────────────────────────────────────── */
+.page-header {
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 2rem;
+}
+
+/* ── Cinematic Glass (modal / overlay) ────────────────────────────────────── */
+.cinematic-glass {
+  background: rgba(17, 18, 20, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.7);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Input Fields ─────────────────────────────────────────────────────────── */
+.input-cinematic {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.65rem 0.875rem;
+  border-radius: 0.5rem;
+  color: var(--text);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.input-cinematic:focus {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.06);
+  outline: none;
+}
+
+/* ── Custom Scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ── Ambient fog (decorative only) ───────────────────────────────────────── */
+.ambient-fog {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  opacity: 0.08;
+  transition: all 0.5s ease;
+}
+
+/* ── Button micro-interactions ───────────────────────────────────────────── */
+.button-tactile {
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+.button-tactile:hover {
+  transform: translateY(-1px);
+}
+.button-tactile:active {
+  transform: translateY(0) scale(0.98);
+}
